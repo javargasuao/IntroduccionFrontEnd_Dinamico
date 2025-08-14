@@ -34,7 +34,13 @@ textArea {
     padding: 5px auto;
 }
 
+.error {
+    color: red;
+}
 
+.datos_entrada {    
+    background-color: #6ee290;
+}
 
 
 button {

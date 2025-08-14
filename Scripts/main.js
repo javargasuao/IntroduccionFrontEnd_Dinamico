@@ -28,12 +28,18 @@ function ingresarPersona(){
 
     if (nombre.length==0 || isNaN(edad) || isNaN(peso)){
         res = 'El nombre, edad o peso, no fueron ingresados o tienen valores de entrada errados'
+
+        document.getElementById("error").innerHTML = res;
+        console.log(res);
+
     }else{
+        document.getElementById("error").innerHTML = "";
         res = armarInformacion(nombre, edad, peso, residencia)
-        info +=  res +'\n';    
+        info +=  res +'\n'; 
+        tARespuesta.textContent = res   
     }
 
-    tARespuesta.textContent = res
+    
 }
 
 function desplegarTodos()
