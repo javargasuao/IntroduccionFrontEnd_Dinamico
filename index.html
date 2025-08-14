@@ -15,26 +15,26 @@
     <main>
         <section class="laInfo">
             <div>
-                <table>
+                <table class="datos_entrada">
                     <caption>Datos Personales</caption>  
                     <tr>
                         <td>Nombre</td>
                         <td>
-                            <input type="text" value="Lina Rios" id="elNombre">
+                            <input type="text" value="" id="elNombre" name="nombre">
                         </td>
                     </tr>  
                     <tr>
                         <td>Edad</td>
                         <td>
                             <!-- pudo ser de tipo number -->
-                            <input type="text" value="21" id="laEdad">
+                            <input type="number" value="" id="laEdad" placeholder="Escriba la edad">
                         </td>
                     </tr>                     
                     <tr>
                         <td>Peso</td>
                         <td>
                             <!-- pudo ser de tipo number -->
-                            <input type="text" value="65.3" id="elPeso">
+                            <input type="number" value="" id="elPeso">
                         </td>
                     </tr> 
                     <tr>
@@ -50,6 +50,7 @@
                     </tr>                           
                 </table>
             </div>
+            <div class="error" id="error"></div>
             <div>
                 <textarea id="laRespuesta" readonly>Salida---</textarea>
             </div>
