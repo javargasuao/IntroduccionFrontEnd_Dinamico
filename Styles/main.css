@@ -20,6 +20,7 @@ table {
     margin: 20px auto;
     padding: 5px auto;
     border: 2px solid;
+    background-color: rgb(119, 216, 161);
 }
 
 input {
@@ -43,3 +44,6 @@ button {
     margin: 10px;
 }
 
+.error {
+    color: brown;
+}
