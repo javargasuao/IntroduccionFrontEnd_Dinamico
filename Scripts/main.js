@@ -8,15 +8,17 @@
 */
 
 import {armarInformacion} from './funciones.js';
+import {calcularcuota} from './funciones.js';
+import {desplegarObjetos} from './funciones.js';
 
 const btnCalcular = document.getElementById("calcular");
-const btnRecordar = document.getElementById("recordar");
+const btnDesplegar = document.getElementById("desplegar");
 
 btnCalcular.addEventListener('click',ingresarPrestamo)
-btnRecordar.addEventListener('click',desplegarTodos)
+btnDesplegar.addEventListener('click',desplegarTodos)
 
-let info = ''
-
+let objetos=[];
+let info="";
 let tARespuesta = document.getElementById("laRespuesta");
 
 function ingresarPrestamo(){
@@ -24,15 +26,23 @@ function ingresarPrestamo(){
     let meses = parseInt(document.getElementById("Meses").value);
     let interes = parseFloat(document.getElementById("Interes").value);
     let prestamo = parseInt(document.getElementById("Prestamo").value);
+    let cuota = calcularcuota(prestamo, interes, meses);
     let res
-    //aqui calculo la cuota
-    let cuota = parseInt(prestamo * ((((1+interes)**meses)*interes)/(((1+interes)**meses)-1)));
 
     if (nombre.length==0 || isNaN(meses) || isNaN(interes) || isNaN(prestamo)){
-        res = 'El nombre, numero de meses o el interes, no fueron ingresados o tienen valores de entrada errados'
+        res = 'El nombre, numero de meses, interes o el valor del prestamo, no fueron ingresados o tienen valores de entrada errados'
     }else{
-        res = armarInformacion(nombre, meses, interes, prestamo, cuota)
-        info +=  res +'\n';    
+    
+        //almaceno la informacion en un objeto
+        const informacion = new Object();
+        informacion.nombre=nombre;
+        informacion.prestamo=prestamo;
+        informacion.meses=meses;
+        informacion.interes=interes;
+        informacion.cuota=cuota;
+        
+        res = armarInformacion(informacion)
+        info += desplegarObjetos(informacion) + "\n";   
     }
 
     tARespuesta.textContent = res
