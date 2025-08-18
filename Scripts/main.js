@@ -9,27 +9,29 @@
 
 import {armarInformacion} from './funciones.js';
 
-const btnEjecutar = document.getElementById("ejecutar");
+const btnCalcular = document.getElementById("calcular");
 const btnRecordar = document.getElementById("recordar");
 
-btnEjecutar.addEventListener('click',ingresarPersona)
+btnCalcular.addEventListener('click',ingresarPrestamo)
 btnRecordar.addEventListener('click',desplegarTodos)
 
 let info = ''
 
 let tARespuesta = document.getElementById("laRespuesta");
 
-function ingresarPersona(){
+function ingresarPrestamo(){
     let nombre = document.getElementById("elNombre").value;   
-    let edad = parseInt(document.getElementById("laEdad").value);
-    let peso = parseFloat(document.getElementById("elPeso").value);
-    let residencia = document.getElementById("laResidencia").value;
+    let meses = parseInt(document.getElementById("Meses").value);
+    let interes = parseFloat(document.getElementById("Interes").value);
+    let prestamo = parseInt(document.getElementById("Prestamo").value);
     let res
+    //aqui calculo la cuota
+    let cuota = parseInt(prestamo * ((((1+interes)**meses)*interes)/(((1+interes)**meses)-1)));
 
-    if (nombre.length==0 || isNaN(edad) || isNaN(peso)){
-        res = 'El nombre, edad o peso, no fueron ingresados o tienen valores de entrada errados'
+    if (nombre.length==0 || isNaN(meses) || isNaN(interes) || isNaN(prestamo)){
+        res = 'El nombre, numero de meses o el interes, no fueron ingresados o tienen valores de entrada errados'
     }else{
-        res = armarInformacion(nombre, edad, peso, residencia)
+        res = armarInformacion(nombre, meses, interes, prestamo, cuota)
         info +=  res +'\n';    
     }
 

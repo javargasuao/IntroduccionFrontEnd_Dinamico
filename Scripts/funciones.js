@@ -7,8 +7,8 @@
 *  Autónoma de Occidente
 */
 
-function armarInformacion(name, age, weight, city){
-    return `Eres ${name} tienes ${age} años pesas ${weight} kgs y vives en ${city}`;
+function armarInformacion(nombre, meses, interes, prestamo, cuota){
+    return `${nombre} debe pagar ${cuota} cada mes por el prestamo de ${prestamo} a ${meses} meses con el interes de ${interes}%`;
 }
 
 export {armarInformacion};
