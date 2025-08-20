@@ -29,7 +29,7 @@ function ingresarPrestamo(){
     let res
 
     if (nombre.length==0 || isNaN(meses) || isNaN(interes) || isNaN(prestamo)){
-        res = 'El nombre, numero de meses, interes o el valor del prestamo, no fueron ingresados o tienen valores de entrada errados'
+        res = '  El nombre, numero de meses, interes o el valor del prestamo, no fueron ingresados o tienen valores de entrada errados'
     }else{
     
         //almaceno la informacion en un objeto
@@ -49,6 +49,9 @@ function ingresarPrestamo(){
 
 function accion()
 {
+    if (obtenerOpcion()=== ""){
+        tARespuesta.textContent= "  Selecciona una Accion por favor"
+    }
     if (obtenerOpcion()=== "Desplegar informacion"){
         tARespuesta.textContent = info;
     }

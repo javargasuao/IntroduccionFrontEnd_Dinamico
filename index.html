@@ -20,31 +20,32 @@
                     <tr>
                         <td>Nombre</td>
                         <td>
-                            <input type="text" value="" id="elNombre">
+                            <input type="text" value="" id="elNombre" name="inputs">
                         </td>
                     </tr>  
                     <tr>
                         <td>Numero de meses</td>
                         <td>
-                            <input type="number" value="" id="Meses">
+                            <input type="number" value="" id="Meses" name="inputs">
                         </td>
                     </tr>                     
                     <tr>
                         <td>Interes</td>
                         <td>
-                            <input type="text" value="0.15 corresponde a 15%" id="Interes">
+                            <input type="text" value="" id="Interes" name="inputs">
                         </td>
                     </tr>
                     <tr>
                         <td>Prestamo</td>
                         <td>
-                            <input type="number" value="" id="Prestamo">
+                            <input type="number" value="" id="Prestamo" name="inputs">
                         </td>
                     </tr>
                     <tr>
                         <td>Accion</td>
                         <td>
                             <select name="Acciones" id="Accion">
+                                <option value="vacio"></option>
                                 <option value="DesplegarInfo">Desplegar informacion</option>
                                 <option value="suma">Sumar las cuotas</option>
                                 <option value="mayor300">Cuota mayor a 300000</option>
@@ -60,7 +61,7 @@
                 </table>
             </div>
             <div>
-                <textarea id="laRespuesta" readonly>...</textarea>
+                <textarea id="laRespuesta" readonly></textarea>
             </div>
             <div>
                 <table id="botones">

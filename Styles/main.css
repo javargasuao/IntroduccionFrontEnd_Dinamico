@@ -1,11 +1,12 @@
 body {
     text-align: center;
-    background-color: lightcyan;
+    background-color: #FFEFEF;
     font-size: 25px;
+    font-family: sans-serif;
+    color: #2D2D3A;
 }
 
 h1 {
-    color: darkgreen;
     font-size: 30px;
 }
 
@@ -16,36 +17,65 @@ h1 {
 }
 
 table {
+    background-color: #FFE1CC;
     width: 500px;
     margin: 20px auto;
     padding: 5px auto;
     border: 2px solid;
+    border-color: #FFCBA7;
+    border-radius: 0px 0px 20px 20px;
 }
 
 input {
-    margin: 5px;
+    margin: 1px;
     padding: 5px;
+    width: 200px;
+    height: 20px;
     background-color: white;
+    border: none;
+    border-radius: 20px;
 }
 
 textArea {
     width: 500px;
     height: 100px;
     padding: 5px auto;
+    border: none;
+    border-radius: 20px;
 }
 
 select{
-    width: 180px;
+    width: 210px;
     height: 30px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 button {
-    width:100px;
-    height: 40px;
-    margin: 10px;
+    width:220px;
+    height: 45px;
+    margin: 1px;
+    background-color: #1D2D50;
+    border: none;
+    color: #FFFFFF;
+    font-size: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #192745;
+    color: #ecebeb;
 }
 
 #botones{
     border: none;
+    background-color: #FFEFEF;
+}
+
+caption{
+    background-color: #FFCBA7;
+    border-radius: 20px 20px 0px 0px;
 }
 
