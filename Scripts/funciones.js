@@ -59,7 +59,7 @@ function incremento(){
 function decremento(){
     datos.forEach(obj => obj.cuota -= 90000);
     let res = datos.map(desplegarObjetos).join("\n");
-    return "Cuotas incrementadas en 90000:\n" + res;
+    return "Cuotas decrementadas en 90000:\n" + res;
 }
 
 function soloCuotas(){
