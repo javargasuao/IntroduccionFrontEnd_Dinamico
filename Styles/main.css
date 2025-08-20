@@ -34,12 +34,18 @@ textArea {
     padding: 5px auto;
 }
 
-
-
+select{
+    width: 180px;
+    height: 30px;
+}
 
 button {
     width:100px;
     height: 40px;
     margin: 10px;
+}
+
+#botones{
+    border: none;
 }
 

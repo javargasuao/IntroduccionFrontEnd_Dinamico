@@ -1,23 +1,22 @@
-/*
-*  archivo main.js
-*  Creado por: Orlando Arboleda Molina
-*
-*  Descripción: 
-*  Permite manipular los elementos de la pagina web y hacerla dinámica, 
-*  para el curso de EDyA1 en la Universidad Autónoma de Occidente
-*/
-
 import {armarInformacion} from './funciones.js';
 import {calcularcuota} from './funciones.js';
 import {desplegarObjetos} from './funciones.js';
+import {suma} from './funciones.js';
+import {mayor300} from './funciones.js';
+import {interes2} from './funciones.js';
+import {incremento} from './funciones.js';
+import {decremento} from './funciones.js';
+import {primer5m} from './funciones.js';
+import {soloCuotas} from './funciones.js';
+import {obtenerOpcion} from './funciones.js';
+import {doceMeses} from './funciones.js';
 
 const btnCalcular = document.getElementById("calcular");
-const btnDesplegar = document.getElementById("desplegar");
+const btnAccion = document.getElementById("accion");
 
 btnCalcular.addEventListener('click',ingresarPrestamo)
-btnDesplegar.addEventListener('click',desplegarTodos)
+btnAccion.addEventListener('click',accion)
 
-let objetos=[];
 let info="";
 let tARespuesta = document.getElementById("laRespuesta");
 
@@ -48,7 +47,33 @@ function ingresarPrestamo(){
     tARespuesta.textContent = res
 }
 
-function desplegarTodos()
+function accion()
 {
-    tARespuesta.textContent = info;
+    if (obtenerOpcion()=== "Desplegar informacion"){
+        tARespuesta.textContent = info;
+    }
+    if (obtenerOpcion()=== "Sumar las cuotas"){
+        tARespuesta.textContent = suma();
+    }
+    if (obtenerOpcion()=== "Cuota mayor a 300000"){
+        tARespuesta.textContent = mayor300();
+    }
+    if (obtenerOpcion()=== "Interes menor a 2 %"){
+        tARespuesta.textContent = interes2();
+    }
+    if (obtenerOpcion()=== "Prestamo mayor a 5 millones"){
+        tARespuesta.textContent = primer5m();
+    }
+    if (obtenerOpcion()=== "Incrementar en 90000"){
+        tARespuesta.textContent = incremento();
+    }
+    if (obtenerOpcion()=== "Decrementar en 90000"){
+       tARespuesta.textContent = decremento();
+    }
+    if (obtenerOpcion()=== "Cuotas"){
+        tARespuesta.textContent = soloCuotas();
+    }
+    if (obtenerOpcion()=== "Plazo menor a 1 año"){
+        tARespuesta.textContent = doceMeses();
+    }
 }

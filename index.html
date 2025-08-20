@@ -26,30 +26,51 @@
                     <tr>
                         <td>Numero de meses</td>
                         <td>
-                            <!-- pudo ser de tipo number -->
                             <input type="number" value="" id="Meses">
                         </td>
                     </tr>                     
                     <tr>
                         <td>Interes</td>
                         <td>
-                            <!-- pudo ser de tipo number -->
                             <input type="text" value="0.15 corresponde a 15%" id="Interes">
                         </td>
                     </tr>
+                    <tr>
                         <td>Prestamo</td>
                         <td>
-                            <!-- pudo ser de tipo number -->
                             <input type="number" value="" id="Prestamo">
-                        </td>                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Accion</td>
+                        <td>
+                            <select name="Acciones" id="Accion">
+                                <option value="DesplegarInfo">Desplegar informacion</option>
+                                <option value="suma">Sumar las cuotas</option>
+                                <option value="mayor300">Cuota mayor a 300000</option>
+                                <option value="12meses">Plazo menor a 1 año</option>
+                                <option value="interes2%">Interes menor a 2 %</option>
+                                <option value="primer5m">Prestamo mayor a 5 millones</option>
+                                <option value="incremento">Incrementar en 90000</option>
+                                <option value="decremento">Decrementar en 90000</option>
+                                <option value="soloCuotas">Cuotas</option>
+                            </select>
+                        </td>
+                    </tr>                           
                 </table>
             </div>
             <div>
                 <textarea id="laRespuesta" readonly>...</textarea>
             </div>
             <div>
-                <button id="calcular">Calcular credito</button> 
-                <button id="desplegar">desplegar informacion</button>
+                <table id="botones">
+                    <td>
+                        <button id="calcular">Calcular credito</button>
+                    </td>
+                    <td>
+                        <button id="accion">Accion</button>
+                    </td>
+                </table>
             </div>
         </section>
         <hr>
