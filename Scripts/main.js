@@ -41,7 +41,8 @@ function ingresarPrestamo(){
         informacion.cuota=cuota;
         
         res = armarInformacion(informacion)
-        info += desplegarObjetos(informacion) + "\n";   
+        info += desplegarObjetos(informacion) + "\n";
+        document.querySelectorAll(".inputs").forEach(input => input.value="");
     }
 
     tARespuesta.textContent = res
@@ -79,4 +80,5 @@ function accion()
     if (obtenerOpcion()=== "Plazo menor a 1 año"){
         tARespuesta.textContent = doceMeses();
     }
+    document.querySelectorAll(".inputs").forEach(input => input.value="");
 }
